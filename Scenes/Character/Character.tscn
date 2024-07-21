@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp3e3nr11bbyn"]
+
+[ext_resource type="Script" path="res://Scripts/StateMachine.gd" id="1_svxbv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_554y3"]
+radius = 6.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_554y3")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("1_svxbv")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+
+[node name="Walk" type="Node" parent="StateMachine"]
+
+[node name="Jump" type="Node" parent="StateMachine"]

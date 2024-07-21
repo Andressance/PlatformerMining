@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bub55jsmygf3h"]
+
+[ext_resource type="PackedScene" uid="uid://ndy5th6ds43j" path="res://Scenes/Stage/Stage.tscn" id="1_5okw7"]
+[ext_resource type="Script" path="res://Scenes/Stage/StageTest.gd" id="1_qhg3d"]
+
+[node name="StageTest" type="Node2D"]
+script = ExtResource("1_qhg3d")
+
+[node name="Stage" parent="." instance=ExtResource("1_5okw7")]
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

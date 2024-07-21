@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://ndy5th6ds43j"]
+
+[ext_resource type="Script" path="res://Scenes/Stage/Stage.gd" id="1_b0d81"]
+
+[node name="Stage" type="Node2D"]
+script = ExtResource("1_b0d81")
+stageName = "Cave"
+
+[node name="Container" type="Container" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Container/VBoxContainer"]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="Container/VBoxContainer"]
+layout_mode = 2
+max_value = 120.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/VBoxContainer"]
+layout_mode = 2
